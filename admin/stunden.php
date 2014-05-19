@@ -109,7 +109,7 @@ while($daten = mysql_fetch_array($re, MYSQL_ASSOC)) {
 <tr><td width="100">Was?:</td>
 	<td><select name="typ">
 <option value="AUSFALL">AUSFALL</option>
-<option value="ÄNDERUNG">&Auml;NDERUNG</option>
+<option value="&Auml;NDERUNG">&Auml;NDERUNG</option>
 </select><?php echo $fehler['typ']; ?></td>
 </tr>
 <tr><td width="100">Datum:</td>
