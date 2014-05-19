@@ -63,7 +63,12 @@ while($daten = mysql_fetch_array($re, MYSQL_ASSOC)) {
 	    $z1++;
 // 	    print_r($arbeiten[1][$z]);
 	}
-       }
+}
+
+$homeworks5 = "";
+$homeworks1 = "";
+$arbeiten5 = "";
+$arbeiten1 = "";
 
 for($i = 1; $i <= count($homeworks[5]); $i++) {
 $splitdate = explode("-",$homeworks[5][$i][date]);
@@ -145,7 +150,6 @@ logg("keine Email fuer 1 Tag verschickt\n");
 logg("######################################################\n");
 
 function sendmails($betreff, $text) {
-require("pw.php"); 
 require("admin/config.php"); 
 $from = $conf['fromfull'];
  
@@ -226,6 +230,7 @@ if(mysql_num_rows($re) > 0) {
 logg("######################################################\n\n");
 
 function logg($text) {
+require("admin/config.php");
 $fp = fopen($conf['logpath'],"a");
 fwrite($fp, $text);
 fclose($fp);
