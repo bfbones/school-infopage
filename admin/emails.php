@@ -39,7 +39,7 @@ if(isset($_GET['con'])) {
 	     'auth' => true,
 	     'username' => $username,
 	     'password' => $password));
-	                $headers = array ('From' => $from,
+	                $headers = array ('From' => $conf['fromfull'],
 	                                'To' => $to,
 	                                'Subject' => $betreff);
 	$mail = $smtp->send($to, $headers, $text);
