@@ -3,7 +3,7 @@
 $mysql_host = 'localhost';
 $mysql_database = 'fi12';
 $mysql_user = 'fi12';
-$mysql_password = 'n3fU3PLHwmsU4CAd';
+$mysql_password = 'pw';
 ##
 
 $conf['class'] = "Fi12"; # Klassenname
