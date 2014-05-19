@@ -44,7 +44,7 @@ if(isset($_GET['con'])) {
 	                                'Subject' => $betreff);
 	$mail = $smtp->send($to, $headers, $text);
 	if (PEAR::isError($mail)) {
-		$info = "Fehler beim verschicken der Best&auml;tigungsmail<br /><br />";
+		$info = "Fehler beim verschicken der Best&auml;tigungsmail: ".$mail->getMessage()."<br /><br />";
 	} else {
 		$info = "Best&auml;tigungsmail wurde verschickt und E-Mail freigeschalten<br /><br />";
 	}
